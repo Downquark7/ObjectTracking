@@ -1,10 +1,6 @@
 import numpy as np
 import cv2
 import time
-import os
-
-# This system command loads the right drivers for the Raspberry Pi camera
-os.system('sudo modprobe bcm2835-v4l2')
 
 w=240
 h=180
@@ -21,10 +17,7 @@ while (True):
 
     image_HSV = cv2.cvtColor(image,cv2.COLOR_BGR2HSV)
     colour = str(image_HSV[h/2][w/2])
-    cv2.line(image,(0,h/2),(w-1,h/2),[255,255,255])        
-    cv2.line(image,(w/2,0),(w/2,h-1),[255,255,255])
-    cv2.putText(image,colour,(10,30),cv2.FONT_HERSHEY_PLAIN,1,[255,255,255])
-    cv2.imshow('View',image)
+    print colour
     # Esc key to stop, otherwise repeat after 1 milliseconds
     key_pressed = cv2.waitKey(1)
     if key_pressed == 27:    
