@@ -17,7 +17,7 @@ while (True):
 
     image_HSV = cv2.cvtColor(image,cv2.COLOR_BGR2HSV)
     colour = str(image_HSV[h/2][w/2])
-    print colour
+    print(colour)
     # Esc key to stop, otherwise repeat after 1 milliseconds
     key_pressed = cv2.waitKey(1)
     if key_pressed == 27:    
