@@ -4,9 +4,8 @@ import time
 import rpyc
 
 c = rpyc.classic.connect("ev3dev")
-time.sleep(2)
-import c.modules.cv2 as rcv2
-time.sleep(2)
+
+rcv2 = c.modules.cv2
 
 w=640
 h=320
