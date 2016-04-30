@@ -17,7 +17,7 @@ time.sleep(2)
 
 while (True):
     success, image = my_camera.read()
-    print typ(image)
+    print type(image)
     image = cv2.flip(image,-1)
     image = cv2.GaussianBlur(image,(5,5),0)
     #print image
