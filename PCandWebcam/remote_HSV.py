@@ -3,7 +3,7 @@ import cv2
 import time
 import rpyc
 
-c = rpyc.classic.connect(ev3dev)
+c = rpyc.classic.connect("ev3dev")
 time.sleep(2)
 import c.modules.cv2 as rcv2
 time.sleep(2)
