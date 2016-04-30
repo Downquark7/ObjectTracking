@@ -14,6 +14,7 @@ my_camera = rcv2.VideoCapture(0)
 my_camera.set(3,w)
 my_camera.set(4,h)
 time.sleep(2)
+print my_camera.read()
 
 while (True):
     success, image = my_camera.read()
