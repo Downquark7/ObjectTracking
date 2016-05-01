@@ -7,7 +7,7 @@ c = rpyc.classic.connect("ev3dev")
 
 rcv2 = c.modules.cv2
 
-import cv2 from c.modules
+import cv2 from c.modules.cv2
 
 w=640
 h=320
