@@ -1,18 +1,14 @@
-#import numpy as np
+import numpy as np
 import cv2
 import time
 import rpyc
 
 c = rpyc.classic.connect("ev3dev")
-numpy = c.modules.numpy
-np = numpy
-rcv2 = c.modules.cv2
-
 
 w=640
 h=320
 
-my_camera = rcv2.VideoCapture(0)
+my_camera = c.modules.cv2.VideoCapture(0)
 my_camera.set(3,w)
 my_camera.set(4,h)
 time.sleep(2)
@@ -20,7 +16,7 @@ time.sleep(2)
 while (True):
     success, image = my_camera.read()
     print type(image)
-    image = rcv2.flip(image,-1)
+    image = cv2.flip(image,-1)
     image = cv2.GaussianBlur(image,(5,5),0)
     #print image
     image_HSV = cv2.cvtColor(image,cv2.COLOR_BGR2HSV)
