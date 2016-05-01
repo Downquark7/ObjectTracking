@@ -1,11 +1,13 @@
 #import numpy as np
-import cv2
+#import cv2
 import time
 import rpyc
 
 c = rpyc.classic.connect("ev3dev")
 
 rcv2 = c.modules.cv2
+
+import cv2 from c.modules
 
 w=640
 h=320
