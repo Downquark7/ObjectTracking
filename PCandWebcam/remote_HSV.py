@@ -1,13 +1,13 @@
 import numpy as np
 import cv2
-import time
+#import time
 import rpyc
 
 c = rpyc.classic.connect("ev3dev")
 
 w=640
 h=320
-
+time = c.modules.time
 my_camera = c.modules.cv2.VideoCapture(0)
 my_camera.set(3,w)
 my_camera.set(4,h)
