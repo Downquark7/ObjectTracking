@@ -14,7 +14,8 @@ my_camera.set(4,h)
 time.sleep(2)
 
 while (True):
-    success, image = my_camera.read()
+    success, camout = my_camera.read()
+    camout = image
     print type(image)
     image = cv2.flip(image,-1)
     image = cv2.GaussianBlur(image,(5,5),0)
