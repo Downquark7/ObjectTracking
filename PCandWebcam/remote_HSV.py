@@ -15,7 +15,7 @@ time.sleep(2)
 
 while (True):
     success, camout = my_camera.read()
-    camout = image
+    image = camout
     print type(image)
     image = cv2.flip(image,-1)
     image = cv2.GaussianBlur(image,(5,5),0)
