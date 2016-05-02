@@ -2,8 +2,8 @@ import numpy as np
 import cv2
 import time
 
-w=640
-h=320
+w=120
+h=160
 
 my_camera = cv2.VideoCapture(0)
 my_camera.set(3,w)
