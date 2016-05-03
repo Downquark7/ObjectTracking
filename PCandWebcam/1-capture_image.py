@@ -15,12 +15,13 @@ time.sleep(2)
 
 # A 'read' from the camera returns two things, a success indicator and the image
 success, image = my_camera.read()
+h, w, channels = image.shape
 # Display the image on screen
 cv2.imshow('View.png',image)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 # Is the image the right way up? If not, flip it. Try changing the -1 to 0 or 1.
-image = cv2.flip(image,-1)
+#image = cv2.flip(image,-1)
 # We could apply a blur to remove noise
 image = cv2.GaussianBlur(image,(55,55),0)
 # Display the image on screen
