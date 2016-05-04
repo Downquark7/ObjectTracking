@@ -31,8 +31,8 @@ image_HSV = cv2.cvtColor(image,cv2.COLOR_BGR2HSV)
 # print the HSV values of the middle pixel
 print('Middle pixel HSV: ',image_HSV[h/2][w/2])
 # define the range of hues to detect - adjust these to detect different colours
-lower_pink = np.array([160,50,50])
-upper_pink = np.array([175,255,255])
+lower_pink = np.uint8([160,50,50])
+upper_pink = np.uint8([175,255,255])
 # create a mask that identifies the pixels in the range of hues
 mask = cv2.inRange(image_HSV,lower_pink,upper_pink)
 mask_inverted=cv2.bitwise_not(mask)
