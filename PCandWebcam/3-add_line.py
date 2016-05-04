@@ -26,8 +26,8 @@ image = cv2.GaussianBlur(image,(5,5),0)
 # change the colour space to HSV
 image_HSV = cv2.cvtColor(image,cv2.COLOR_BGR2HSV)
 # define the range of hues to detect
-lower_pink = np.array([160,50,50])
-upper_pink = np.array([175,255,255])
+lower_pink = np.uint8([160,50,50])
+upper_pink = np.uint8([175,255,255])
 # create a mask that identifies the pixels in the range of hues
 mask = cv2.inRange(image_HSV,lower_pink,upper_pink)
 # Blur to remove noise
