@@ -18,8 +18,8 @@ while (True):
     image = cv2.GaussianBlur(image,(5,5),0)
 
     image_HSV = cv2.cvtColor(image,cv2.COLOR_BGR2HSV)
-    lower_pink = np.array([160,50,50])
-    upper_pink = np.array([175,255,255])
+    lower_pink = np.uint8([160,50,50])
+    upper_pink = np.uint8([175,255,255])
     mask = cv2.inRange(image_HSV,lower_pink,upper_pink)
     mask = cv2.GaussianBlur(mask,(5,5),0)
 
